@@ -1,0 +1,739 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;
+}
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+.section{
+	text-align:center;
+}
+
+#menu{
+    display: none; /* HIDES MENU */
+}
+
+#menu li {
+	display:inline-block;
+	margin: 20px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:absolute; /*standaard op fixed */
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 320px;
+	padding: 0;
+	margin: auto;
+    position: absolute;
+    left: 0; right: 0;
+
+}
+.twitter-share-button{
+	position: fixed;
+	z-index: 99;
+	right: 149px;
+	top: 9px;
+}
+#download{
+	margin: 10px 0 0 0;
+	padding: 15px 10px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #49afcd;
+	background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from( #5bc0de),to( #2f96b4));
+	background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: linear-gradient(top, #5bc0de, #2f96b4);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+	border-color: #2f96b4 #2f96b4 #1f6377;
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+#download a{
+	text-decoration:none;
+	color:#fff;
+}
+#download:hover{
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	background-color: #2F96B4;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-ms-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+#infoMenu{
+	height: 20px;
+	color: #f2f2f2;
+	position:fixed;
+	z-index:70;
+	bottom:0;
+	width:100%;
+	text-align:right;
+	font-size:0.9em;
+	padding:8px 0 8px 0;
+}
+#infoMenu ul{
+	padding: 0 40px;
+}
+#infoMenu li a{
+	display: block;
+	margin: 0 22px 0 0;
+	color: #333;
+}
+#infoMenu li a:hover{
+	text-decoration:underline;
+}
+#infoMenu li{
+	display:inline-block;
+	position:relative;
+}
+#examplesList{
+	display:none;
+	background: #282828;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px;
+	float: left;
+	position: absolute;
+	bottom: 29px;
+	right: 0;
+	width:638px;
+	text-align:left;
+}
+#examplesList ul{
+	padding:0;
+}
+#examplesList ul li{
+	display:block;
+	margin: 5px 0;
+}
+#examplesList ul li a{
+	color: #BDBDBD;
+	margin:0;
+}
+#examplesList ul li a:hover{
+	color: #f2f2f2;
+}
+#examplesList .column{
+	float: left;
+	margin: 0 20px 0 0;
+}
+#examplesList h3{
+	color: #f2f2f2;
+	font-size: 1.2em;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	padding: 0 0 5px 0;
+}
+
+
+
+/* Demos Menu
+ * --------------------------------------- */
+ #demosMenu{
+	position:fixed;
+	bottom: 10px;
+	right:10px;
+	z-index: 999;
+ }
+
+
+#bgimg{
+    position: relative;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: #000; /* in case the video doesn't fit the whole page*/
+  		background-image: url(img/bg.jpg);
+  		background-position: center center;
+  		background-size: cover;
+        background-repeat: no-repeat;   
+   		object-fit: cover; /*cover video background */
+        overflow: hidden !important;
+}
+
+#bgimg2{
+    position: relative;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: #000; /* in case the video doesn't fit the whole page*/
+  		background-image: url(img/bg2.jpg);
+  		background-position: center center;
+  		background-size: cover;
+        background-repeat: no-repeat;   
+   		object-fit: cover; /*cover video background */
+        overflow: hidden !important;
+}
+
+#bgimg3{
+    position: relative;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: #000; /* in case the video doesn't fit the whole page*/
+  		background-image: url(img/bg3.jpg);
+  		background-position: top center;
+  		background-size: cover;
+        background-repeat: no-repeat;   
+   		object-fit: cover; /*cover video background */
+        overflow: hidden !important;
+}
+
+#bgimg4{
+    position: relative;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: #000; /* in case the video doesn't fit the whole page*/
+  		background-image: url(img/bg4.jpg);
+  		background-position: top center;
+  		background-size: cover;
+        background-repeat: no-repeat;   
+   		object-fit: cover; /*cover video background */
+        overflow: hidden !important;
+}
+
+#bgimg5{
+    position: relative;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+ 		background-color: #000; /* in case the video doesn't fit the whole page*/
+  		background-image: url(img/bg5.jpg);
+  		background-position: bottom center;
+  		background-size: cover;
+        background-repeat: no-repeat;   
+   		object-fit: cover; /*cover video background */
+        overflow: hidden !important;
+}
+
+#bgimg6{
+    position: relative;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+ 		background-color: #000; /* in case the video doesn't fit the whole page*/
+  		background-image: url(img/bg6.jpg);
+  		background-position: bottom center;
+  		background-size: cover;
+        background-repeat: no-repeat;   
+   		object-fit: cover; /*cover video background */
+        overflow: hidden !important;
+}
+
+#bgimg-bottom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height:55%;
+    background-image: url(img/bottom-bg2.png);
+    background-position: center 100px;
+    background-size: cover;  
+    background-repeat: no-repeat; 
+    object-fit: cover; /*cover video background */
+    overflow: hidden !important;
+}
+
+#bgimg-bottom-low{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height:45%;
+    background-image: url(img/bottom-bg2.png);
+    background-position: center 100px;
+    background-size: cover;  
+    background-repeat: no-repeat; 
+    object-fit: cover; /*cover video background */
+    overflow: hidden !important;
+}
+
+#bgimg-bottom-low-blur{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height:45%;
+    background-image: url(img/bottom-blur.png);
+    background-position: center 100px;
+    background-size: cover;  
+    background-repeat: no-repeat; 
+    object-fit: cover; /*cover video background */
+    overflow: hidden !important;
+}
+
+#bgimg-bottom-low2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height:45%;
+    background-image: url(img/bottom-bg3.png);
+    background-position: center 100px;
+    background-size: cover;  
+    background-repeat: no-repeat; 
+    object-fit: cover; /*cover video background */
+    overflow: hidden !important;
+    z-index: 2;
+}
+
+#slideContainer{
+    width:100%;
+    height:80%;
+    margin-top:100px;
+}
+
+#slideText{
+    width:70%;
+    margin: 55px auto;
+}
+
+#logo{
+    min-width:100px;
+    max-width:400px;
+    margin: auto;
+    position: absolute;
+    top: -150px; left: 0; bottom: 0; right: 0;
+    z-index: 50;
+}
+
+#title{
+    position: absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    top:-27%;
+    bottom:0;
+    width:50%;
+    z-index: 50;
+    display: inline;
+    margin:auto;
+}
+
+#title-intro{
+    min-width:100px;
+    max-width:320px;
+    z-index: 50;
+    margin:auto;
+}
+
+#title-miguel{
+    min-width:100px;
+    max-width:400px;
+    padding-bottom:15px;
+    margin:auto;
+    margin-left:35px;
+}
+
+#title-map{
+    position: relative;
+    min-width:100px;
+    max-width:500px;
+    padding-bottom:15px;
+    margin:auto;
+    margin-left:35px;
+    z-index: 2000;
+    margin-top:-30px;
+}
+
+#title-magic{
+    min-width:100px;
+    max-width:400px;
+    padding-bottom:15px;
+    margin:auto;
+}
+
+#title-meaning{
+    min-width:100px;
+    max-width:600px;
+    margin-top:25px;
+    display: inline;
+    margin:auto;
+}
+
+#title-inspiration{
+    min-width:100px;
+    max-width:600px;
+    z-index: 50;
+    margin:auto;
+}
+
+#title-influences{
+    min-width:100px;
+    max-width:260px;
+    z-index: 50;
+    margin:auto;
+}
+
+#title-performance{
+    min-width:100px;
+    max-width:500px;
+    margin-top:25px;
+    display: inline;
+    margin:auto;
+}
+
+#title-credits{
+    min-width:100px;
+    max-width:500px;
+    margin-top:25px;
+    display: inline;
+    margin:auto;
+}
+
+
+#title-closing{
+    min-width:100px;
+    max-width:450px;
+    margin-top:25px;
+    display: inline;
+    margin:auto;
+}
+
+#flyingBirds{
+    position: absolute;
+    margin-top:10%;
+    z-index:50;
+    overflow: hidden;
+    height:400px;
+    right:-10%;
+}
+
+#flyingBirds2{
+    position: absolute;
+    margin-top:10%;
+    z-index:50;
+    overflow: hidden;
+    height:400px;
+    left:-10%;
+}
+
+#clouds{
+    position: absolute;
+    z-index:5;
+    overflow: hidden;
+    width:70%;
+    left:0;
+    right:0;
+    top:-70px;
+    margin:auto;
+}
+
+#stars{
+    position: absolute;
+    z-index:0;
+    overflow: hidden;
+    width:100%;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+
+#clickhere{
+    position: absolute;
+    width:150px;
+    left:1%;
+    right:0;
+    top:15%;
+    bottom:0;
+    margin:auto;
+}
+
+#sun{
+    position: absolute;
+    margin-top:-7%;
+    z-index:2;
+    overflow: hidden;
+    height:300px;
+    left:5%;
+}
+
+#sun2{
+    position: absolute;
+    margin-top:-7%;
+    z-index:2;
+    overflow: hidden;
+    height:300px;
+    right:5%;
+}
+
+#sun-low{
+    position: absolute;
+    margin-top:20%;
+    z-index:1;
+    overflow: hidden;
+    height:200px;
+    left:8%;
+}
+
+#palm{
+    position: relative;
+    margin-right:75%;
+    margin-top:5%;
+    z-index:50;
+    overflow: hidden;
+    height:300px;
+}
+
+#palm2{
+    position: relative;
+    margin-top:2%;
+    z-index:50;
+    overflow: hidden;
+    height:450px;
+}
+
+#startButton{
+    width:200px;
+    margin: auto;
+    position: absolute;
+    top: 40%; left: 0; bottom: 0; right: 0;
+    z-index:5000;
+}
+
+#restartButton{
+    width:200px;
+    margin: auto;
+    position: absolute;
+    top: 45%; left: 0; bottom: 0; right: 0;
+    z-index:5000;
+}
+
+#map{
+    width:850px;
+    margin: auto;
+    position: absolute;
+    top: 70%; left:15%; bottom: 0; right: 0;
+    z-index:0;
+}
+
+#changru{
+    width:250px;
+    margin: auto;
+    position: absolute;
+    top: 10%; left:-45%; bottom: 0; right: 0;
+    z-index:0;
+}
+
+
+#vine{
+    height:450px;
+    margin: auto;
+    position: absolute;
+    top: 10%; left:45%; bottom: 0; right: 0;
+    z-index:0;
+}
+
+
+
+#normalVid{
+    margin: auto;
+    position: absolute;
+    top:10%; left: 0; bottom: 0; right: 0;
+    z-index:3;
+    min-width:40%;
+    max-width:60%;
+}
+
+#normalVidSize{
+    width:100%;
+}
+
+#longText{
+    margin: auto;
+    position: absolute;
+    top: 0px; left: 0; bottom: 0; right: 0;
+    width:38%;
+    height:130px;
+}
+
+#longText-miguel{
+
+    position: absolute;
+    top: 0px; left: 0; bottom: 0; right: 0;
+        margin: auto;
+    width:45%;
+    max-height:250px;
+}
+
+#longText-miguel2{
+    margin: auto;
+    position: absolute;
+    top: -440px; left: 34%; bottom: 0; right: 0;
+    width:600px;
+    height:160px;
+    font-size:0.9em;
+}
+
+#longText-miguel3{
+    position: absolute;
+    top: -20%; left: 0; bottom: 0; right: 0;
+        margin: auto;
+    width:45%;
+    max-height:250px;
+}
+
+#album{
+    margin:auto;
+    width:450px;
+}
+
+#longText-white{
+    margin: auto;
+    position: absolute;
+    top: -300px; left: 0; bottom: 0; right: 0;
+    width:38%;
+    height:130px;
+    color:white;
+}
+
+#videoTitle{
+    position: relative;
+    height:25px;
+    width:100%;
+}
+
+
